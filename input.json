@@ -1,6 +1,6 @@
 {
-  "API_NAME": "APINAME",
-  "API_DISPLAY_NAME": "DISPLAY NAME",
+  "API_NAME": "dash",
+  "API_DISPLAY_NAME": "DASH API",
   "API_VERSION": "v1.0",
   "BASE_BACKEND_URL": "http://baseurl",
   "BACKEND_SCOPEID_KEYNAME": "dash-backend-scopeid",
