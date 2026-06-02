@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "displayName": "APINAME_BACKEND_SCOPEID",
+    "secret": true,
+    "keyVault": {
+      "secretIdentifier": "https://#{{ apiOpsKeyVaultName }}.vault.azure.net/secrets/dash-backend-scopeid"
+    }
+  }
+}
