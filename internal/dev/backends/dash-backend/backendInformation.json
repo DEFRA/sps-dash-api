@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "description": "dash Backend",
+    "protocol": "http",
+    "url": "https://devdaiinfai1401.cognitiveservices.azure.com/openai/deployments/o4-mini/chat/completions"
+  }
+}

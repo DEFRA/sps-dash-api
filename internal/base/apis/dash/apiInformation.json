@@ -1,12 +1,12 @@
 {
   "properties": {
-    "path": "api/<<API_NAME>>",
+    "path": "dash",
     "apiRevision": "1",
-    "apiVersion": "<<API_VERSION>>",
-    "apiVersionSetId": "/subscriptions/#{{ subscriptionId }}/resourceGroups/#{{ apiManagementServiceResourceGroup }}/providers/Microsoft.ApiManagement/service/#{{ apiManagementServiceName }}/apiVersionSets/<<API_NAME>>",
+    "apiVersion": "v1.0",
+    "apiVersionSetId": "/subscriptions/#{{ subscriptionId }}/resourceGroups/#{{ apiManagementServiceResourceGroup }}/providers/Microsoft.ApiManagement/service/#{{ apiManagementServiceName }}/apiVersionSets/dash",
     "authenticationSettings": {},
     "isCurrent": true,
-    "displayName": "<<API_DISPLAY_NAME>>",
+    "displayName": "DASH API",
     "protocols": [
       "https"
     ],

@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "description": "dash Backend",
+    "protocol": "http",
+    "url": "http://tsturl"
+  }
+}
