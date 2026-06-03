@@ -1,6 +1,6 @@
 {
-  "API_NAME": "APINAME",
-  "API_DISPLAY_NAME": "DISPLAY NAME",
+  "API_NAME": "dash",
+  "API_DISPLAY_NAME": "DASH API",
   "API_VERSION": "v1.0",
   "BASE_BACKEND_URL": "http://baseurl",
   "BACKEND_SCOPEID_KEYNAME": "dash-backend-scopeid",
@@ -8,7 +8,7 @@
   "TENANT_ID": "#{{ defraTenantId }}",
   "RATE_LIMIT_CALLS": 100,
   "RATE_LIMIT_PERIOD": 60,
-  "DEV_BACKEND_URL": "http://devurl",
+  "DEV_BACKEND_URL": "https://devdaiinfai1401.cognitiveservices.azure.com/openai/deployments/o4-mini/chat/completions",
   "TST_BACKEND_URL": "http://tsturl",
   "PRE_BACKEND_URL": "http://preurl"
 }
