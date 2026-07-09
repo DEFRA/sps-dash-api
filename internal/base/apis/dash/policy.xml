@@ -17,6 +17,9 @@
 				</claim>
 			</required-claims>
 		</validate-jwt>
+		<set-header name="Authorization" exists-action="override">
+            <value>{{DASH_BACKEND_SUBKEY}}</value>
+        </set-header>
 		<set-backend-service backend-id="dash-backend" />
 	</inbound>
 	<backend>
