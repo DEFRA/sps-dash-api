@@ -1,14 +1,14 @@
 {
-  "API_NAME": "APINAME",
-  "API_DISPLAY_NAME": "DISPLAY NAME",
+  "API_NAME": "dash",
+  "API_DISPLAY_NAME": "DASH API",
   "API_VERSION": "v1.0",
-  "BASE_BACKEND_URL": "http://baseurl",
+  "BASE_BACKEND_URL": "https://devdaiinfai1401.cognitiveservices.azure.com/openai/deployments/o4-mini/chat/completions/?api-version=2025-01-01-preview",
   "BACKEND_SCOPEID_KEYNAME": "dash-backend-scopeid",
   "FRONTEND_CLIENTID_KEYNAME": "dash-frontend-clientid",
   "TENANT_ID": "#{{ defraTenantId }}",
   "RATE_LIMIT_CALLS": 100,
   "RATE_LIMIT_PERIOD": 60,
-  "DEV_BACKEND_URL": "http://devurl",
-  "TST_BACKEND_URL": "http://tsturl",
-  "PRE_BACKEND_URL": "http://preurl"
+  "DEV_BACKEND_URL": "https://devdaiinfai1401.cognitiveservices.azure.com/openai/deployments/o4-mini/chat/completions/?api-version=2025-01-01-preview",
+  "TST_BACKEND_URL": "https://devdaiinfai1401.cognitiveservices.azure.com/openai/deployments/o4-mini/chat/completions/?api-version=2025-01-01-preview",
+  "PRE_BACKEND_URL": "https://predaiinfai1401.cognitiveservices.azure.com/openai/deployments/gpt-4.1-nano/chat/completions?api-version=2025-01-01-preview"
 }
