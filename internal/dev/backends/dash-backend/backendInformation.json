@@ -2,6 +2,6 @@
   "properties": {
     "description": "dash Backend",
     "protocol": "http",
-    "url": "https://devdaiinfai1401.cognitiveservices.azure.com/openai/deployments/"
+    "url": "https://devdaiinfai1401.cognitiveservices.azure.com/"
   }
 }
