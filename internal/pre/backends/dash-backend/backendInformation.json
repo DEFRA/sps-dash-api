@@ -2,6 +2,6 @@
   "properties": {
     "description": "dash Backend",
     "protocol": "http",
-    "url": "https://predaiinfai1401.cognitiveservices.azure.com/openai/deployments/gpt-4.1-nano/chat/completions"
+    "url": "https://predaiinfai1401.cognitiveservices.azure.com/"
   }
 }
