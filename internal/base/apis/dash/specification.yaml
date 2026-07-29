@@ -4,13 +4,26 @@ info:
   description: ''
   version: v1.0
 servers:
-  - url: https://dev-int-api-gateway.azure.defra.cloud/openai/deployments/v1.0
+  - url: https://dev-int-api-gateway.azure.defra.cloud/dash/v1.0
 paths:
-  /o4-mini/chat/completions:
+  '/openai/deployments/{deploymentmodel}/chat/completions':
     post:
-      summary: O4 MINI
-      description: O4 MINI
+      summary: Chat Completions
+      description: 'Chat Completions '
       operationId: post
+      parameters:
+        - name: deploymentmodel
+          in: path
+          required: true
+          schema:
+            type: ''
+      responses:
+        '200':
+          description: ''
+  /documentintelligence/documentModels/prebuilt-read:analyze:
+    post:
+      summary: Document Intelligence
+      operationId: document-intelligence
       responses:
         '200':
           description: ''
