@@ -4,7 +4,6 @@
     "secret": true,
     "keyVault": {
       "secretIdentifier": "https://#{{ apiOpsKeyVaultName }}.vault.azure.net/secrets/dash-backend-scopeid"
-    },
-    "secret": true
+    }
   }
 }
