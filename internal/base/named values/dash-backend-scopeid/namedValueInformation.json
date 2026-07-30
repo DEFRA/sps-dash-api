@@ -1,6 +1,6 @@
 {
   "properties": {
-    "displayName": "dash_BACKEND_SCOPEID",
+    "displayName": "DASH_BACKEND_SCOPEID",
     "secret": true,
     "tags": [],
     "value": "#{{ dasBackendScopeId }}"
