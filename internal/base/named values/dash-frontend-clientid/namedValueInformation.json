@@ -1,6 +1,6 @@
 {
   "properties": {
-    "displayName": "dash_FRONTEND_CLIENTID",
+    "displayName": "DASH_FRONTEND_CLIENTID",
     "secret": true,
     "tags": [],
     "value": "#{{ dashFrontendClientId }}"
