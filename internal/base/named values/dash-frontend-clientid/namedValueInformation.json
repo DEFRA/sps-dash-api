@@ -1,9 +1,8 @@
 {
   "properties": {
-    "displayName": "dash_FRONTEND_CLIENTID",
+    "displayName": "DASH_FRONTEND_CLIENTID",
     "secret": true,
-    "keyVault": {
-      "secretIdentifier": "https://#{{ apiOpsKeyVaultName }}.vault.azure.net/secrets/dash-frontend-clientid"
-    }
+    "tags": [],
+    "value": "#{{ dashFrontendClientId }}"
   }
 }

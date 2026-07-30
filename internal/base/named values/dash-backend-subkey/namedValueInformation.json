@@ -2,7 +2,7 @@
   "properties": {
     "displayName": "DASH_BACKEND_SUBKEY",
     "keyVault": {
-      "secretIdentifier": "https://#{{ apiOpsKeyVaultName }}.vault.azure.net/secrets/dash-backend-subkey"
+      "secretIdentifier": "https://#{{ apiOpsKeyVaultName }}.vault.azure.net/secrets/#{{ dashBackendSubKeyName }}"
     },
     "secret": true
   }
