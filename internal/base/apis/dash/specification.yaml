@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: DASH API
-  description: ''
+  description: DASH API provides capabilities to generate chat completions and analyze documents using AI services and enables consumers to integrate language and document-intelligence processing into their applications.
   version: v1.0
 servers:
   - url: https://dev-int-api-gateway.azure.defra.cloud/dash/v1.0
