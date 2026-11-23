@@ -25,9 +25,25 @@
 	<backend>
 		<base />
 	</backend>
-	<outbound>
-		<base />
-	</outbound>
+	 <outbound>
+        <base />
+        <choose>
+            <when condition="@(context.Response.StatusCode == 202)">
+                <!-- modelId from APIM request -->
+                <set-variable name="modelId" value="@(context.Request.MatchedParameters["modelId"])" />
+                <!-- Backend Operation-Location -->
+                <set-variable name="backendOperationLocation" value="@(context.Response.Headers.GetValueOrDefault("Operation-Location",""))" />
+                <!-- Extract resultId -->
+                <set-variable name="resultId" value="@{
+                    var opLocation = (string)context.Variables["backendOperationLocation"];
+                    return opLocation.Split('/').Last();
+                }" />
+                <set-header name="Operation-Location" exists-action="override">
+                    <value>@($"https://{context.Request.OriginalUrl.Host}/documentintelligence/documentModels/{context.Variables["modelId"]}/analyzeResults/{context.Variables["resultId"]}")</value>
+                </set-header>
+            </when>
+        </choose>
+    </outbound>
 	<on-error>
 		<base />
 	</on-error>
