@@ -1,0 +1,157 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "DASH API",
+        "description": "APIM wrapper for Azure AI Document Intelligence Analyze and Analyze Results operations",
+        "version": "v1.0"
+    },
+    "servers": [{
+        "url": "https://dev-int-api-gateway.azure.defra.cloud/dash/v1.0"
+    }],
+    "paths": {
+        "/documentModels/{modelId}:analyze": {
+            "post": {
+                "summary": "Analyze a document",
+                "description": "Analyze a document",
+                "operationId": "AnalyzeDocument",
+                "parameters": [{
+                    "name": "modelId",
+                    "in": "path",
+                    "description": "Document Intelligence model ID (e.g. prebuilt-read, prebuilt-layout)",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "api-version",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "default": "2024-11-30"
+                    }
+                }],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AnalyzeDocumentRequest"
+                            },
+                            "example": {
+                                "urlSource": "string"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "202": {
+                        "description": "Document accepted for analysis",
+                        "headers": {
+                            "Operation-Location": {
+                                "description": "APIM polling URL for retrieving analysis results",
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/documentModels/{modelId}/analyzeResults/{resultId}": {
+            "get": {
+                "summary": "Get analysis result",
+                "description": "Get analysis result",
+                "operationId": "GetAnalyzeResult",
+                "parameters": [{
+                    "name": "modelId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "resultId",
+                    "in": "path",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }, {
+                    "name": "api-version",
+                    "in": "query",
+                    "schema": {
+                        "type": "string",
+                        "default": "2024-11-30"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "Analysis result",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/AnalyzeResult"
+                                },
+                                "example": {
+                                    "status": "succeeded",
+                                    "createdDateTime": "string",
+                                    "lastUpdatedDateTime": "string",
+                                    "analyzeResult": {}
+                                }
+                            }
+                        }
+                    },
+                    "202": {
+                        "description": "Analysis still in progress"
+                    },
+                    "404": {
+                        "description": "Result not found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AnalyzeDocumentRequest": {
+                "required": ["urlSource"],
+                "type": "object",
+                "properties": {
+                    "urlSource": {
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            },
+            "AnalyzeResult": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "example": "succeeded"
+                    },
+                    "createdDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "lastUpdatedDateTime": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "analyzeResult": {
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    }
+}
