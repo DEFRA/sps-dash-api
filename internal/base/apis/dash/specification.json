@@ -9,7 +9,7 @@
         "url": "https://dev-int-api-gateway.azure.defra.cloud/dash/v1.0"
     }],
     "paths": {
-        "/documentModels/{modelId}:analyze": {
+        "/documentintelligence/documentModels/{modelId}:analyze": {
             "post": {
                 "summary": "Analyze a document",
                 "description": "Analyze a document",
@@ -66,7 +66,7 @@
                 }
             }
         },
-        "/documentModels/{modelId}/analyzeResults/{resultId}": {
+        "/documentintelligence/documentModels/{modelId}/analyzeResults/{resultId}": {
             "get": {
                 "summary": "Get analysis result",
                 "description": "Get analysis result",
